@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megasinema - Telegram Mini App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎬 Megasinema Katalogi</h1>
+        <input type="text" id="searchInput" placeholder="Kino nomini qidirish...">
+    </header>
+
+    <button id="closeButton">Ilovani Yopish</button>
+
+    <main id="movieContainer">
+        <div class="movie-card" data-title="Avengers">
+            <h2>Qasoskorlar: Intiho</h2>
+            <img src="placeholder.jpg" alt="Avengers poster">
+            <p>Fantastik, Jangari | 2019</p>
+            <button onclick="showDetails('Avengers')">Koʻrish</button>
+        </div>
+
+        <div class="movie-card" data-title="SpiderMan">
+            <h2>Oʻrgimchak odam: Uyga Yoʻl Yoʻq</h2>
+            <img src="placeholder.jpg" alt="SpiderMan poster">
+            <p>Superqahramon, Sarguzasht | 2021</p>
+            <button onclick="showDetails('SpiderMan')">Koʻrish</button>
+        </div>
+    </main>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
