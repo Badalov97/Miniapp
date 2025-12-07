@@ -21,6 +21,27 @@
             <img src="placeholder.jpg" alt="Avengers poster">
             <p>Fantastik, Jangari | 2019</p>
             <button onclick="showDetails('Avengers')">Koʻrish</button>
+// ... (mavjud kod) ...
+
+// 3. Kino haqida maʼlumot koʻrsatish funksiyasi
+function showDetails(movieTitle) {
+    if (movieTitle === 'SenMengaKeraksan') {
+        // Yangi oyna ochish va kinoni koʻrsatish
+        window.open('https://uzbeklar.biz/10256-sen-menga-keraksan.html', '_blank');
+        
+        // Foydalanuvchiga xabar berish (ixtiyoriy)
+        alert("Film tashqi saytda ochilmoqda. Telegram ilovasi menyusini tekshiring.");
+
+    } else {
+        // Boshqa kinolar uchun eski ogohlantirish qoladi
+        alert(movieTitle + ' filmi uchun pleer sahifasiga oʻtish lozim. Backend (server) kodini qoʻshing.');
+    }
+
+    // ... (MainButton koʻrsatish/yashirish qismi) ...
+}
+
+// ... (mavjud kod) ...
+
         </div>
 
         <div class="movie-card" data-title="SpiderMan">
