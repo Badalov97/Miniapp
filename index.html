@@ -3,57 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megasinema - Telegram Mini App</title>
+    <title>Megasinema: Kino-App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>🎬 Megasinema Katalogi</h1>
-        <input type="text" id="searchInput" placeholder="Kino nomini qidirish...">
+    <header id="mainHeader">
+        <h1 class="app-title">🍿 MEGA KINO</h1>
+        <input type="text" id="searchInput" placeholder="Film, Serial qidirish...">
     </header>
 
-    <button id="closeButton">Ilovani Yopish</button>
+    <div id="catalogPage" class="page active">
+        <h2 class="section-title">Eng Soʻnggi Filmlar</h2>
+        <div id="movieContainer" class="movie-grid">
+            </div>
+    </div>
 
-    <main id="movieContainer">
-        <div class="movie-card" data-title="Avengers">
-            <h2>Qasoskorlar: Intiho</h2>
-            <img src="placeholder.jpg" alt="Avengers poster">
-            <p>Fantastik, Jangari | 2019</p>
-            <button onclick="showDetails('Avengers')">Koʻrish</button>
-// ... (mavjud kod) ...
-
-// 3. Kino haqida maʼlumot koʻrsatish funksiyasi
-function showDetails(movieTitle) {
-    if (movieTitle === 'SenMengaKeraksan') {
-        // Yangi oyna ochish va kinoni koʻrsatish
-        window.open('https://uzbeklar.biz/10256-sen-menga-keraksan.html', '_blank');
-        
-        // Foydalanuvchiga xabar berish (ixtiyoriy)
-        alert("Film tashqi saytda ochilmoqda. Telegram ilovasi menyusini tekshiring.");
-
-    } else {
-        // Boshqa kinolar uchun eski ogohlantirish qoladi
-        alert(movieTitle + ' filmi uchun pleer sahifasiga oʻtish lozim. Backend (server) kodini qoʻshing.');
-    }
-
-    // ... (MainButton koʻrsatish/yashirish qismi) ...
-}
-
-// ... (mavjud kod) ...
-
+    <div id="playerPage" class="page">
+        <button id="backButton" class="back-btn">← Katalogga Qaytish</button>
+        <h2 id="movieTitle" class="section-title">Film Nomi</h2>
+        <div id="videoPlaceholder" class="video-container">
+            <div id="playerContent"></div>
         </div>
+        <p id="movieDescription" class="description-text"></p>
+    </div>
 
-        <div class="movie-card" data-title="SpiderMan">
-            <h2>Oʻrgimchak odam: Uyga Yoʻl Yoʻq</h2>
-            <img src="placeholder.jpg" alt="SpiderMan poster">
-            <p>Superqahramon, Sarguzasht | 2021</p>
-            <button onclick="showDetails('SpiderMan')">Koʻrish</button>
-        </div>
-    </main>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
+
